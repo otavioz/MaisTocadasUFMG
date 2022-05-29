@@ -1,2 +1,2 @@
 ﻿# Ignore .env
-*.env
+/.env
