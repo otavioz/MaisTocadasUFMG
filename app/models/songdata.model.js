@@ -6,20 +6,12 @@ module.exports = mongoose => {
                 type: [{}],
                 required: [true, '* Campo obrigatório!']
             },
-            total: {
-                type: Number,
-                required: true
-            },
             limit: {
                 type: Number,
                 required: true
             },
-            offset: {
-                type: Number,
-                required: true
-            },
-            previous: {
-                type: String,
+            cursors: {
+                type: [{}],
                 default: null,
             },
             href: {
