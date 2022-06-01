@@ -5,7 +5,7 @@ const path = __dirname + '/app/views/';
 const app = express();
 require('dotenv').config()
 var corsOptions = {
-    origin: "http://localhost:8081"
+    origin: "https://maistocadasufmg-bcsth.ondigitalocean.app/" // http://localhost:8081"
 };
 
 app.use(express.static(path));
