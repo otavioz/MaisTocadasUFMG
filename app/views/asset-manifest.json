@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/static/css/main.d313e513.css",
-    "main.js": "/static/js/main.db1f6acc.js",
+    "main.js": "/static/js/main.f87cb694.js",
     "static/media/mtocadas-logo.png": "/static/media/mtocadas-logo.f86248e5b6fd11726464.png",
     "index.html": "/index.html",
     "main.d313e513.css.map": "/static/css/main.d313e513.css.map",
-    "main.db1f6acc.js.map": "/static/js/main.db1f6acc.js.map"
+    "main.f87cb694.js.map": "/static/js/main.f87cb694.js.map"
   },
   "entrypoints": [
     "static/css/main.d313e513.css",
-    "static/js/main.db1f6acc.js"
+    "static/js/main.f87cb694.js"
   ]
 }
