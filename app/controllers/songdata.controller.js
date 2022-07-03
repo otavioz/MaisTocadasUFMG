@@ -1,5 +1,6 @@
 ﻿const db = require("../models");
 const SongData = db.songdata;
+const SongTuple = db.songtuple;
 // Create and Save a new SongData
 exports.create = (req, res) => {
     // Validate request
@@ -47,4 +48,27 @@ exports.deleteAll = (req, res) => {
 // Find all published SongDatas
 exports.findAllPublished = (req, res) => {
 
+};
+exports.createTuple = (req, res) => {
+    // Validate request
+    if (!req.body.items) {
+        res.status(400).send({ message: "Content can not be empty!" });
+        return;
+    }
+    // Create a SongTuple
+    const songtuple = new SongTuple(
+        req.body
+    );
+    // Save SongTuple in the database
+    songtuple
+        .save(songtuple)
+        .then(data => {
+            res.send(data);
+        })
+        .catch(err => {
+            res.status(500).send({
+                message:
+                    err.message || "Some error occurred while creating the songtuple."
+            });
+        });
 };
