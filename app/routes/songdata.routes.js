@@ -15,7 +15,8 @@
     router.delete("/:id", songdatas.delete);
     // Create a new SongData
     router.delete("/", songdatas.deleteAll);
-    app.use('/api/songdatas', router);
-    router.post("/", songdatas.createTuple);
+    // Save SongTuple (playlist)
+    router.post("/songtuple", songdatas.createTuple);
+
     app.use('/api/songtuple', router);
 };
