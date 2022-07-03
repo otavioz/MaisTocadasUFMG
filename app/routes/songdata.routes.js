@@ -16,4 +16,6 @@
     // Create a new SongData
     router.delete("/", songdatas.deleteAll);
     app.use('/api/songdatas', router);
+    router.post("/", songdatas.createTuple);
+    app.use('/api/songtuple', router);
 };
