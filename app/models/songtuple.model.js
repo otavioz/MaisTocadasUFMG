@@ -4,7 +4,7 @@ module.exports = mongoose => {
         {
             collaborative: {
                 type: String,
-                required: true
+                required: false
             },
             description: {
                 type: String,
@@ -27,7 +27,7 @@ module.exports = mongoose => {
                 required: false
             },
             name: {
-                type: Number,
+                type: String,
                 required: true
             },
             owner: {
@@ -36,15 +36,15 @@ module.exports = mongoose => {
             },
             primary_color: {
                 type: String,
-                required: true
+                required: false
             },
             public: {
                 type: String,
-                required: true
+                required: false
             },
             snapshot_id: {
                 type: String,
-                required: true
+                required: false
             },
             tracks: {
                 type: [{}],
@@ -52,11 +52,11 @@ module.exports = mongoose => {
             },
             type: {
                 type: String,
-                required: true
+                required: false
             },
             uri: {
                 type: String,
-                required: true
+                required: false
             }
         },
         { timestamps: true }
