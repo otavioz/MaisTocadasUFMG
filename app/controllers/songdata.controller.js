@@ -5,7 +5,7 @@ const SongTuple = db.songtuple;
 exports.create = (req, res) => {
     // Validate request
     if (!req.body.items) {
-        res.status(400).send({ message: "Content can not be empty!" });
+        res.status(400).send({ message: "Requisição deve conter um array de músicas!" });
         return;
     }
     // Create a SongData
@@ -51,8 +51,8 @@ exports.findAllPublished = (req, res) => {
 };
 exports.createTuple = (req, res) => {
     // Validate request
-    if (!req.body.items) {
-        res.status(400).send({ message: "Content can not be empty!" });
+    if (!req.body.tracks) {
+        res.status(400).send({ message: "Requisição deve conter uma playlist" });
         return;
     }
     // Create a SongTuple

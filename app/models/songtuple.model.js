@@ -12,7 +12,7 @@ module.exports = mongoose => {
             },
             external_urls: {
                 type: [{}],
-                required: [true, '* Campo obrigatório!']
+                required: false
             },
             followers: {
                 type: [{}],
@@ -48,7 +48,7 @@ module.exports = mongoose => {
             },
             tracks: {
                 type: [{}],
-                default: null,
+                required: [true, '* Campo obrigatório!']
             },
             type: {
                 type: String,
