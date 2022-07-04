@@ -18,5 +18,5 @@
     // Save SongTuple (playlist)
     router.post("/songtuple", songdatas.createTuple);
 
-    app.use('/api/songtuple', router);
+    app.use('/api/songdatas', router);
 };
