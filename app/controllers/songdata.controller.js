@@ -26,9 +26,31 @@ exports.create = (req, res) => {
         });
 };
 // Retrieve all SongDatas from the database.
-exports.findAll = (req, res) => {
-
+exports.findAllTracks = (req, res) => {
+    //const title = req.query.title;
+    var condition = { tracks: 1 }
+    SongTuple.find({}, condition)
+        .then(data => {
+            var result = []
+            data.forEach(element => {
+                element.tracks[0].items.forEach(e => {
+                    result.push(e.track)
+                });
+            });
+            res.send(result);
+        })
+        .catch(err => {
+            res.status(500).send({
+                message:
+                    err.message || "Some error occurred while retrieving tutorials."
+            });
+        });
 };
+
+// Retrieve all SongDatas from the database.
+exports.findAll = (req, res) => {
+};
+
 // Find a single SongData with an id
 exports.findOne = (req, res) => {
 
@@ -43,10 +65,6 @@ exports.delete = (req, res) => {
 };
 // Delete all SongDatas from the database.
 exports.deleteAll = (req, res) => {
-
-};
-// Find all published SongDatas
-exports.findAllPublished = (req, res) => {
 
 };
 exports.createTuple = (req, res) => {

@@ -6,7 +6,7 @@
     // Retrieve all songdatas
     router.get("/", songdatas.findAll);
     // Retrieve all published songdatas
-    router.get("/published", songdatas.findAllPublished);
+    router.get("/playlist", songdatas.findAllTracks);
     // Retrieve a single SongData with id
     router.get("/:id", songdatas.findOne);
     // Update a SongData with id
